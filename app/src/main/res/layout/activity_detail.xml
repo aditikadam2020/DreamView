@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/myToolbar"
+        android:background="@color/neviBlue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/profile"
+                android:src="@drawable/person_img"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_width="30dp"
+                android:layout_height="30dp"/>
+            <TextView
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:layout_centerInParent="true"
+                android:text="DreamView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <ImageView
+                android:id="@+id/cart"
+                android:layout_marginRight="16dp"
+                android:src="@drawable/cart_img"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="30dp"
+                android:layout_height="30dp"/>
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ProductImage"
+            android:padding="10dp"
+            android:layout_marginTop="60dp"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"/>
+
+        <LinearLayout
+            android:padding="10dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/price"
+                android:textSize="20sp"
+                android:text="400"
+                android:textStyle="bold"
+                android:textColor="@color/neviBlue"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/title"
+                android:textSize="20sp"
+                android:text="Title"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/description"
+                android:textSize="18sp"
+                android:text="this is description"
+                android:textColor="@color/black"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="130dp"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:id="@+id/tryNow"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@color/neviBlue"
+                    android:layout_margin="10dp"
+                    android:layout_width="25dp"
+                    android:layout_height="50dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Try 3D View"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white">
+                    </TextView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:weightSum="2">
+        <LinearLayout
+            android:id="@+id/addToCart"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@color/neviBlue"
+            android:layout_margin="10dp"
+            android:layout_width="25dp"
+            android:layout_height="50dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add To Cart"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/white">
+            </TextView>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/buyNow"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@color/neviBlue"
+            android:layout_margin="10dp"
+            android:layout_width="25dp"
+            android:layout_height="50dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Buy Now"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/white">
+            </TextView>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

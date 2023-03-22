@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "383197568143",
+    "firebase_url": "https://dreamviewapp-bffa7-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "dreamviewapp-bffa7",
+    "storage_bucket": "dreamviewapp-bffa7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:383197568143:android:9dde3ba81dabd2627de4fa",
+        "android_client_info": {
+          "package_name": "com.example.dreamview"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "383197568143-l58u3liaa6k4hbop3o5llmv9mg64f7ai.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNNOm55GnyQKBfOgzkY5PSKVxkrqD4ChA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "383197568143-l58u3liaa6k4hbop3o5llmv9mg64f7ai.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:383197568143:android:beeb1a15b83bd0df7de4fa",
+        "android_client_info": {
+          "package_name": "com.example.dvadmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "383197568143-l58u3liaa6k4hbop3o5llmv9mg64f7ai.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNNOm55GnyQKBfOgzkY5PSKVxkrqD4ChA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "383197568143-l58u3liaa6k4hbop3o5llmv9mg64f7ai.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:383197568143:android:6566611fa83d4b0a7de4fa",
+        "android_client_info": {
+          "package_name": "com.softraa.artest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "383197568143-l58u3liaa6k4hbop3o5llmv9mg64f7ai.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNNOm55GnyQKBfOgzkY5PSKVxkrqD4ChA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "383197568143-l58u3liaa6k4hbop3o5llmv9mg64f7ai.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

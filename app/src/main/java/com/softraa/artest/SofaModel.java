@@ -6,6 +6,7 @@ public class SofaModel implements Serializable {
 
     private String id;
     private String title;
+    private String resource;
     private String description;
     private String image;
     private String price;
@@ -14,13 +15,35 @@ public class SofaModel implements Serializable {
     public SofaModel(){
     }
 
-    public SofaModel(String id, String title, String description, String image, String price, boolean show) {
+    public SofaModel(String id, String title, String resource, String description, String image, String price, boolean show) {
         this.id = id;
         this.title = title;
+        this.resource = resource;
         this.description = description;
         this.image = image;
         this.price = price;
         this.show = show;
+    }
+
+    @Override
+    public String toString() {
+        return "SofaModel{" +
+                "id='" + id + '\'' +
+                ", title='" + title + '\'' +
+                ", resource='" + resource + '\'' +
+                ", description='" + description + '\'' +
+                ", image='" + image + '\'' +
+                ", price='" + price + '\'' +
+                ", show=" + show +
+                '}';
+    }
+
+    public String getResource() {
+        return resource;
+    }
+
+    public void setResource(String resource) {
+        this.resource = resource;
     }
 
     public String getId() {

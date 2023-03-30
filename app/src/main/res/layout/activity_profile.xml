@@ -29,8 +29,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="end"
-            android:src="@drawable/logo"></ImageView>
-
+            android:src="@drawable/logo">
+        </ImageView>
     </LinearLayout>
 
 

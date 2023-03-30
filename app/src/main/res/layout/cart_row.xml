@@ -27,13 +27,13 @@
                 android:text="Title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
-            <TextView
-                android:id="@+id/description"
-                android:layout_margin="2dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Description"
-                android:textSize="13sp"/>
+<!--            <TextView-->
+<!--                android:id="@+id/description"-->
+<!--                android:layout_margin="2dp"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Description"-->
+<!--                android:textSize="13sp"/>-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -60,20 +60,29 @@
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Quantity: "
+                    android:textColor="@color/neviBlue"
                     android:textSize="14sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/neviBlue"/>
+                    android:textStyle="bold" />
                 <TextView
-                    android:id="@+id/qty"
+                    android:id="@+id/qtycount"
                     android:text="1"
                     android:textSize="14sp"
                     android:textColor="@color/neviBlue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
+                <ImageView
+                    android:id="@+id/delete"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="right"
+                    android:layout_marginStart="150dp"
+                    android:src="@drawable/delete">
+                </ImageView>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

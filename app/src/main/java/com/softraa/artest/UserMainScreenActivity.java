@@ -10,9 +10,6 @@ import com.softraa.artest.databinding.ActivityUserMainScreenBinding;
 
 import org.imaginativeworld.whynotimagecarousel.model.CarouselItem;
 
-
-
-
 public class UserMainScreenActivity extends AppCompatActivity {
 
     ActivityUserMainScreenBinding binding;
@@ -24,11 +21,11 @@ public class UserMainScreenActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
         slider();
 
-        binding.menu.setOnClickListener(new View.OnClickListener() {
+        binding.profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(UserMainScreenActivity.this,ProfileActivity.class));
                 finish();
+                startActivity(new Intent(UserMainScreenActivity.this,ProfileActivity.class));
             }
         });
 
@@ -37,6 +34,38 @@ public class UserMainScreenActivity extends AppCompatActivity {
             public void onClick(View v) {
                 startActivity(new Intent(UserMainScreenActivity.this, SofaActivity.class));
                 finish();
+                System.out.println("aditi");
+            }
+        });
+
+        binding.camera.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+                startActivity(new Intent(UserMainScreenActivity.this, CameraDetailActivity.class));
+            }
+        });
+
+        binding.clock.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+                startActivity(new Intent(UserMainScreenActivity.this, ClockDetailActivity.class));
+            }
+        });
+
+        binding.laptop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+                startActivity(new Intent(UserMainScreenActivity.this,LaptopDetailActivity.class));
+            }
+        });
+
+        binding.cart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(UserMainScreenActivity.this, CartActivity.class));
             }
         });
 

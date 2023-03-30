@@ -22,12 +22,21 @@
         </ImageView>
 
         <ImageView
-            android:id="@+id/menu"
-            android:layout_marginStart="130dp"
+            android:id="@+id/cart"
+            android:layout_width="30dp"
+            android:layout_marginStart="90dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/cart">
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/profile"
+            android:layout_marginStart="10dp"
             android:layout_width="30dp"
             android:layout_height="40dp"
             android:layout_gravity="center_vertical"
-            android:src="@drawable/menu">
+            android:src="@drawable/person_img">
         </ImageView>
     </LinearLayout>
 
@@ -179,7 +188,7 @@
         </GridLayout>
 
         <GridLayout
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             android:id="@+id/home2"
             android:layout_width="match_parent"
             android:layout_height="100dp"
@@ -278,7 +287,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="NEWLY ARRIVED"
+                android:text="TOP 3 NEWLY ARRIVED"
                 android:gravity="center_horizontal"
                 android:layout_margin="5dp"
                 android:textSize="16sp"
@@ -345,6 +354,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/clock"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -401,6 +411,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/laptop"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"

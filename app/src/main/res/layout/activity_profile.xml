@@ -254,6 +254,16 @@
                 android:layout_marginBottom="15dp"
                 android:background="#57000000" />
 
+            <Button
+                android:id="@+id/orders"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="100dp"
+                android:textColor="@color/white"
+                android:text="MY ORDERS">
+            </Button>
 
             <Button
                 android:id="@+id/logout"

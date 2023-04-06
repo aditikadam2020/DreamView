@@ -69,6 +69,13 @@ public class UserMainScreenActivity extends AppCompatActivity {
             }
         });
 
+        binding.Electronics.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(UserMainScreenActivity.this,ElectronicsActivity.class));
+            }
+        });
+
     }
 
     private void slider(){

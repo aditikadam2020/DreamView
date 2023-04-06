@@ -7,6 +7,7 @@ public class CartItemModel {
     private  double price;
 
     private int quantity;
+    private int createdAt;
 
     private double itemTotalCost;
 

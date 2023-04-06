@@ -29,6 +29,18 @@ This helps to check a specific feature in the phone's hardware,
         android:theme="@style/Theme.DreamView"
         tools:targetApi="31">
         <activity
+            android:name=".OrderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ElectronicsArActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ElectronicsDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ElectronicsActivity"
+            android:exported="false" />
+        <activity
             android:name=".CartActivity"
             android:exported="false" />
         <activity
@@ -92,6 +104,10 @@ This helps to check a specific feature in the phone's hardware,
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="rzp_test_qO9x6oybV41I3E" />
     </application>
 
 </manifest>

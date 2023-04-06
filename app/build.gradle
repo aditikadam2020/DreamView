@@ -74,6 +74,7 @@ dependencies {
     implementation 'org.imaginativeworld.whynotimagecarousel:whynotimagecarousel:2.1.0'
     //slider end
     implementation 'com.google.ar:core:1.36.0'
+    implementation 'com.razorpay:checkout:1.6.29'
     api project(':sceneformux')
 
 }

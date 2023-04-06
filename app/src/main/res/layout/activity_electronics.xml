@@ -4,9 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    tools:context=".SofaActivity"
-    android:orientation="vertical">
+    tools:context=".ElectronicsActivity">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -34,16 +32,16 @@
             android:textStyle="bold"
             android:padding="10dp"
             android:layout_margin="10dp"
-            android:text="Sofa Category"
+            android:text="Electronics Category"
             android:layout_gravity="center_vertical">
         </TextView>
 
         <ImageView
             android:id="@+id/cart"
             android:gravity="end"
-            android:layout_marginStart="50dp"
+            android:layout_marginStart="30dp"
             android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_height="40dp"
             android:layout_gravity="center_vertical"
             android:src="@drawable/cart">
         </ImageView>
@@ -66,11 +64,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/sofaRecycler"
+            android:id="@+id/ElectronicsRecycler"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
         </androidx.recyclerview.widget.RecyclerView>
     </androidx.core.widget.NestedScrollView>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

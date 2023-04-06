@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SofaDetailActivity">
+    tools:context=".ElectronicsDetailActivity">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -50,7 +50,7 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <ImageView
-            android:id="@+id/SofaImage"
+            android:id="@+id/ElectronicsImage"
             android:layout_width="match_parent"
             android:layout_height="170dp"
             android:layout_marginTop="20dp"
@@ -153,8 +153,6 @@
                     android:textSize="18sp"
                     android:textStyle="bold"></TextView>
             </LinearLayout>
-
-
         </LinearLayout>
     </LinearLayout>
 

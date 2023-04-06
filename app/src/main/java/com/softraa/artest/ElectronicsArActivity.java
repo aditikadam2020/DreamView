@@ -23,11 +23,12 @@ import com.google.ar.sceneform.ux.TransformableNode;
 
 import java.util.Objects;
 
-public class SofaArActivity extends AppCompatActivity {
+public class ElectronicsArActivity extends AppCompatActivity {
     CardView cd;
-    private  SofaModel sofaModel ;
+    private  ElectronicsModel electronicsModel ;
     private ArFragment arCam;
     private int tapCount = 0;
+
 
     public static boolean checkSystemSupport(Activity activity) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
@@ -49,19 +50,19 @@ public class SofaArActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sofa_ar);
+        setContentView(R.layout.activity_electronics_ar);
         ProgressDialog pd = new ProgressDialog(this);
         pd.setTitle("Loading..");
         pd.setMessage("Item is Loading.. Please Wait...");
         Intent intent = getIntent();
-        sofaModel = (SofaModel) intent.getSerializableExtra("model");
+        electronicsModel = (ElectronicsModel) intent.getSerializableExtra("model");
 //        System.out.println("Inside SofaArAct");
-        System.out.println(sofaModel.toString());
+        System.out.println(electronicsModel.toString());
         cd=findViewById(R.id.back);
         cd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(SofaArActivity.this, SofaDetailActivity.class));
+                startActivity(new Intent(ElectronicsArActivity.this, ElectronicsDetailActivity.class));
                 finish();
             }
         });
@@ -75,21 +76,21 @@ public class SofaArActivity extends AppCompatActivity {
                     if (tapCount == 1) {
                         pd.show();
                         Anchor anchor = hitResult.createAnchor();
-                            ModelRenderable.builder()
-                                    .setSource(this, Uri.parse( sofaModel.getResource().toString()))
-                                    .setIsFilamentGltf(true)
-                                    .build()
-                                    .thenAccept(
-                                            modelRenderable -> {
-                                                addModel(anchor,modelRenderable);
-                                                pd.cancel();
-                                            }
-                                    )
-                                    .exceptionally(throwable -> {
-                                        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-                                        builder.setMessage("Something went wrong" + throwable.getMessage()).show();
-                                        return null;
-                                    });
+                        ModelRenderable.builder()
+                                .setSource(this, Uri.parse( electronicsModel.getResource().toString()))
+                                .setIsFilamentGltf(true)
+                                .build()
+                                .thenAccept(
+                                        modelRenderable -> {
+                                            addModel(anchor,modelRenderable);
+                                            pd.cancel();
+                                        }
+                                )
+                                .exceptionally(throwable -> {
+                                    AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                                    builder.setMessage("Something went wrong" + throwable.getMessage()).show();
+                                    return null;
+                                });
                     }
                 });
             }

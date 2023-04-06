@@ -41,7 +41,9 @@ public class ProfileActivity extends AppCompatActivity {
                 finish();
             }
         });
-
+        binding.orders.setOnClickListener(v -> {
+            startActivity(new Intent(ProfileActivity.this,OrderActivity.class));
+        });
         binding.logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -58,6 +60,7 @@ public class ProfileActivity extends AppCompatActivity {
         binding.getemail.findViewById(R.id.getemail);
         binding.getphone.findViewById(R.id.getphone);
         binding.getAddress.findViewById(R.id.getAddress);
+
     }
 
     private void getUserData()                                                                                                                                                        // User data sending

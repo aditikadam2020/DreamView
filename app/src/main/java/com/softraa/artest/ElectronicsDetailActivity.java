@@ -22,32 +22,31 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
-import com.softraa.artest.databinding.ActivitySofaDetailBinding;
+import com.softraa.artest.databinding.ActivityElectronicsDetailBinding;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class SofaDetailActivity extends AppCompatActivity {
-
-    ActivitySofaDetailBinding binding;
-    private SofaModel sofaModel;
+public class ElectronicsDetailActivity extends AppCompatActivity {
+    ActivityElectronicsDetailBinding binding;
+    private ElectronicsModel electronicsModel;
     FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivitySofaDetailBinding.inflate(getLayoutInflater());
+        binding=ActivityElectronicsDetailBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         Intent intent = getIntent();
-        sofaModel = (SofaModel) intent.getSerializableExtra("model");
-        binding.title.setText(sofaModel.getTitle());
-        binding.description.setText(sofaModel.getDescription());
-        binding.price.setText(sofaModel.getPrice());
+        electronicsModel = (ElectronicsModel) intent.getSerializableExtra("model");
+        binding.title.setText(electronicsModel.getTitle());
+        binding.description.setText(electronicsModel.getDescription());
+        binding.price.setText(electronicsModel.getPrice());
 
         Glide.with(binding.getRoot())
-                .load(sofaModel.getImage())
-                .into(binding.SofaImage);
+                .load(electronicsModel.getImage())
+                .into(binding.ElectronicsImage);
 
         binding.addToCart.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,39 +58,37 @@ public class SofaDetailActivity extends AppCompatActivity {
         binding.trynow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(binding.getRoot().getContext(), SofaArActivity.class);
-                intent.putExtra("model", sofaModel);
+                Intent intent = new Intent(binding.getRoot().getContext(), ElectronicsArActivity.class);
+                intent.putExtra("model", electronicsModel);
                 binding.getRoot().getContext().startActivity(intent);
             }
         });
-
         binding.back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
-                startActivity(new Intent(SofaDetailActivity.this, SofaActivity.class));
+                startActivity(new Intent(ElectronicsDetailActivity.this, ElectronicsActivity.class));
             }
         });
 
         binding.profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(SofaDetailActivity.this, ProfileActivity.class));
+                startActivity(new Intent(ElectronicsDetailActivity.this, ProfileActivity.class));
             }
         });
 
         binding.cart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(SofaDetailActivity.this,CartActivity.class));
+                startActivity(new Intent(ElectronicsDetailActivity.this,CartActivity.class));
             }
         });
-
     }
 
     private void showBottomSheet() {
         BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(this);
-        View view = LayoutInflater.from(SofaDetailActivity.this).inflate(R.layout.bottom_layout, (LinearLayout) findViewById(R.id.mainLayout), false);
+        View view = LayoutInflater.from(ElectronicsDetailActivity.this).inflate(R.layout.bottom_layout, (LinearLayout) findViewById(R.id.mainLayout), false);
         bottomSheetDialog.setContentView(view);
         EditText qty = view.findViewById(R.id.qty);
         Button btn = view.findViewById(R.id.conti);
@@ -102,9 +99,9 @@ public class SofaDetailActivity extends AppCompatActivity {
             public void onClick(View v) {
                 CartItemModel cartItemModel = new CartItemModel();
                 cartItemModel.setQuantity(Integer.parseInt(qty.getText().toString()));
-                cartItemModel.setImage(sofaModel.getImage());
-                cartItemModel.setTitle(sofaModel.getTitle());
-                cartItemModel.setPrice(Double.parseDouble(sofaModel.getPrice().replace("₹", "")));
+                cartItemModel.setImage(electronicsModel.getImage());
+                cartItemModel.setTitle(electronicsModel.getTitle());
+                cartItemModel.setPrice(Double.parseDouble(electronicsModel.getPrice().replace("₹", "")));
                 cartItemModel.setItemTotalCost(cartItemModel.getPrice() * cartItemModel.getQuantity());
                 FirebaseFirestore.getInstance()
                         .collection("cart")
@@ -131,7 +128,7 @@ public class SofaDetailActivity extends AppCompatActivity {
                                     }).addOnFailureListener(new OnFailureListener() {
                                         @Override
                                         public void onFailure(@NonNull Exception e) {
-                                            Toast.makeText(SofaDetailActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
+                                            Toast.makeText(ElectronicsDetailActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
                                         }
                                     });
                                 } else {
@@ -149,7 +146,7 @@ public class SofaDetailActivity extends AppCompatActivity {
                                         }).addOnFailureListener(new OnFailureListener() {
                                             @Override
                                             public void onFailure(@NonNull Exception e) {
-                                                Toast.makeText(SofaDetailActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
+                                                Toast.makeText(ElectronicsDetailActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
                                             }
                                         });
 
@@ -164,4 +161,3 @@ public class SofaDetailActivity extends AppCompatActivity {
         });
     }
 }
-
